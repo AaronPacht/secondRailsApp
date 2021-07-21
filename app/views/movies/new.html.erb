@@ -1,0 +1,17 @@
+<h1>Add a movie</h1>
+<%= link_to "back", movies_path %>
+<%= form_for @movie do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :release_year %>
+        <%= f.text_field :release_year %>
+    </div>
+    <div>
+        <%= f.label :review %>
+        <%= f.text_field :review %>
+    </div>
+    <%= f.submit %>
+<% end %>

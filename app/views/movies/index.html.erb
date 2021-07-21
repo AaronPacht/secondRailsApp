@@ -1,0 +1,5 @@
+<h1>All movies</h1>
+<%= link_to "New movie",new_movie_path %>
+<% @movies.each do |movie| %>
+    <li>Name: <%= movie.name %> | Release year: <%= movie.release_year %> | Review: <%= movie.review %> | <%= link_to "show", movie_path(movie) %> | <%= link_to "edit", edit_movie_path(movie) %> | <%= link_to "delete", movie_path(movie), method: :delete %></li>
+<% end %>
